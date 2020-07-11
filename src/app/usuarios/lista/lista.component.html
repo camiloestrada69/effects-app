@@ -1,0 +1,15 @@
+<div class="row car-columns">
+  <div class="card card-body col-lg-4 col-ms-4" style="width: 18rem;" *ngFor="let usuario of usuarios">
+    <img [src]="usuario.avatar" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{usuario.first_name}} {{usuario.last_name}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <p class="card-text">
+        <span class="text-muted">ID: {{usuario.id}}</span>
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
