@@ -22,4 +22,13 @@ export class UsuarioService {
         })
       );
   }
+
+  getUserById(id: string): Observable<any> {
+    return this.http.get(`${endpoint}${endpointUser}/${id}`)
+      .pipe(
+        map(response => {
+          return response['data'];
+        })
+      );
+  }
 }
