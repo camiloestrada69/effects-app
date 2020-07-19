@@ -1,3 +1,19 @@
+<div *ngIf="loading" class="alert alert-info" role="alert">
+  <h4 class="alert-heading">Cargando...</h4>
+  <p><i class="fa fa-sync fa-spin  fa-2x"></i></p>
+  <hr>
+  <p class="mb-0"></p>
+</div>
+
+<div *ngIf="error" class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Error</h4>
+  <pre>
+    {{error | json}}
+  </pre>
+  <hr>
+</div>
+
+
 <div class="row car-columns">
   <div class="card card-body col-lg-4 col-ms-4" style="width: 18rem;" *ngFor="let usuario of usuarios">
     <img [src]="usuario.avatar" class="card-img-top" alt="...">
